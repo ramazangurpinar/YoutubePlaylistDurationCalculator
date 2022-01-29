@@ -1,0 +1,23 @@
+{
+  "name": "Duration Calculator for Youtube",
+  "description": "Calculates total duration of Youtube Playlist.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["storage"],  
+  "icons": {
+    "16": "src/images/flag/16/Turkey.png",
+    "32": "src/images/flag/32/Turkey.png",
+    "48": "src/images/flag/48/Turkey.png",
+    "128": "src/images/flag/128/Turkey.png"
+  },
+  "page_action": {
+      "default_icom": {
+          "16": "src/images/flag/16/Turkey.png",
+          "48": "src/images/flag/48/Turkey.png",
+          "128": "src/images/flag/128/Turkey.png"
+      }
+  }  
+}
