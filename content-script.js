@@ -1,22 +1,16 @@
 var duration = "";
-var resultDuration = "";
 setInterval(() => isYoutubePlaylist(window.location.href), 1000);
 
 function isYoutubePlaylist(url){
-    if(resultDuration.toString().includes('Sec') )
-    return;
-
     if(url.length>0)
     {
         if(url.includes("&list=") && url.includes("youtube.com"))
         {
             document.getElementsByTagName("TITLE")[0].text = getDuration()
-            resultDuration = document.getElementsByTagName("TITLE")[0].text
         }
         else if(url.includes("playlist?list=") && url.includes("youtube.com"))
         {
             document.getElementsByTagName("TITLE")[0].text =  getDuration()
-            resultDuration = document.getElementsByTagName("TITLE")[0].text
         }
     }
 }
@@ -40,7 +34,7 @@ function getDuration()
                 a = ytp[i].getElementsByTagName('ytd-thumbnail-overlay-time-status-renderer')[0].innerText;
               } 
             catch (e) {
-                console.log(`Iteration ${i} catch block.Error ${e}`);
+                /*console.log(`Iteration ${i} catch block.Error ${e}`);*/
                 continue;
             }
             var tx = a.split(':');
