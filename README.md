@@ -3,4 +3,5 @@
 This project is a google chrome extension. 
 This extension enable people to learn playlist duration in Youtube
 
-![image](https://user-images.githubusercontent.com/41094010/158079037-6948a227-0c3d-4381-a397-192790dbaddb.png)
+![Duration Image](https://user-images.githubusercontent.com/41094010/158079064-6e05bfc4-0cb7-4c84-a0e1-667113b2d38e.png)
+
