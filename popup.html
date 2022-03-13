@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <style>
+
+    .button {
+      position: relative;
+      background-color: #4CAF50;
+      border: none;
+      font-size: 10px;
+      font-weight: bold;
+      color: #FFFFFF;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 14px;
+    }
+    
+    .button:after {
+      content: "";
+      background: #f1f1f1;
+      display: block;
+      position: absolute;
+      padding-top: 300%;
+      padding-left: 350%;
+      margin-left: -20px !important;
+      margin-top: -120%;
+      opacity: 0;
+      transition: all 0.8s
+    }
+    
+    .button:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s
+    }
+
+  </style>
+  <body>
+    <button id="demo" class="button">Calculate Duration</button>
+  </body>
+</html>
