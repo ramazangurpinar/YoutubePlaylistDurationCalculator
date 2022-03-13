@@ -2,22 +2,34 @@
   "name": "Duration Calculator for Youtube",
   "description": "Calculates total duration of Youtube Playlist.",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting"],
   "background": {
-    "service_worker": "src/background.js"
-  },
-  "permissions": ["storage"],  
+    "service_worker": "background.js"
+  }, 
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*&list=*", 
+        "https://*.youtube.com/playlist?list=*"
+      ],
+      "css": ["my-styles.css"],
+      "js": ["content-script.js"]
+    }
+  ],     
   "icons": {
-    "16": "src/images/flag/16/Turkey.png",
-    "32": "src/images/flag/32/Turkey.png",
-    "48": "src/images/flag/48/Turkey.png",
-    "128": "src/images/flag/128/Turkey.png"
+    "16": "images/flag/16/Turkey.png",
+    "32": "images/flag/32/Turkey.png",
+    "48": "images/flag/48/Turkey.png",
+    "128": "images/flag/128/Turkey.png"
   },
-  "page_action": {
-      "default_icom": {
-          "16": "src/images/flag/16/Turkey.png",
-          "48": "src/images/flag/48/Turkey.png",
-          "128": "src/images/flag/128/Turkey.png"
-      }
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+        "16": "images/flag/16/Turkey.png",
+        "32": "images/flag/32/Turkey.png",
+        "48": "images/flag/48/Turkey.png",
+        "128": "images/flag/128/Turkey.png"
+    }
   }  
 }
